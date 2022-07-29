@@ -1,0 +1,140 @@
+// GRID CONFIG
+//--------------------------------------
+$columns: 12;
+$widthColumn: (100%/$columns);
+$gutter-width: 15;
+$font-base: 16;
+$widthContent: 1200px;
+
+$full: 100%;
+
+// mix columns grid
+@mixin column($totalColumns, $margin-left: $gutter-width, $margin-right: $margin-left, $float:left, $resume: false) {
+    width: $widthColumn*$totalColumns;
+
+    @if ($resume=false) {
+        float: $float;
+
+        @if ($margin-left !=0) {
+            padding-left: $margin-left * 1px;
+        }
+
+        @if ($margin-right !=0) {
+            padding-right: $margin-right* 1px;
+        }
+    }
+}
+
+@mixin width($totalColumns) {
+    width: $widthColumn*$totalColumns;
+}
+
+// mix grid flex
+@mixin flex($totalColumns) {
+    flex: 0 1 $widthColumn*$totalColumns;
+    max-width: $widthColumn*$totalColumns;
+}
+
+// mix left space
+@mixin prefix($totalColumns) {
+    margin-left: $widthColumn*$totalColumns;
+}
+
+// mix right space
+@mixin sufix($totalColumns) {
+    margin-right: $widthColumn*$totalColumns;
+}
+
+@mixin flexCenterBetween() {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin flexCenterCenter() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin ulNoStyles() {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+@mixin imgDefault() {
+    width: auto;
+    max-width: $full;
+    height: auto;
+    display: block;
+}
+
+// container
+.container {
+    width: $full;
+    @include flex(12);
+}
+
+// pages
+.page-default {
+    width: $full;
+    max-width: $full;
+    height: auto;
+    min-height: 200px;
+    margin: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+// content 1200px
+.wrapper-content {
+    width: $full;
+    max-width: $full;
+    padding: 0 15px;
+    margin-right: auto;
+    margin-left: auto;
+    transition: all 0.2s ease;
+
+    &.no-padding {
+        padding: 0;
+    }
+
+    @media (min-width: 425px) {
+        max-width: 425px;
+    }
+
+    @media (min-width: 576px) {
+        max-width: 576px;
+    }
+
+    @media (min-width: 768px) {
+        max-width: 768px;
+    }
+
+    @media (min-width: 992px) {
+        max-width: 992px;
+    }
+
+    @media (min-width: 1024px) {
+        max-width: 1024px;
+    }
+
+    @media (min-width: 1200px) {
+        max-width: $widthContent;
+    }
+}
+
+// Columns
+.col1 { @include column(1); }
+.col2 { @include column(2); }
+.col3 { @include column(3); }
+.col4 { @include column(4); }
+.col5 { @include column(5); }
+.col6 { @include column(6); }
+.col7 { @include column(7); }
+.col8 { @include column(8); }
+.col9 { @include column(9); }
+.col10 { @include column(10); }
+.col11 { @include column(11); }
+.col12 { @include column(12); }

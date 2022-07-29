@@ -1,0 +1,95 @@
+// Forms
+.form-default {
+    .input-box {
+        margin-bottom: 10px;
+
+        @media screen and (max-width: 768px) {
+            &.col8, &.col4 {
+                width: 100%;
+            }
+
+            &.col4 {
+                padding-right: 0 !important;
+            }
+        }
+
+        input,
+        select,
+        textarea {
+            width: $full;
+            height: 40px;
+            border-radius: 25px;
+            padding: 0 15px;
+            color: $input-color;
+            border: 2px solid $input-border;
+            font-size: 14px;
+            line-height: 40px;
+            background: $input-bg;
+
+            &:focus {
+                background-color: #eee;
+            }
+        }
+
+        select {
+            &:focus {
+                background-color: $input-bg;
+            }
+        }
+
+        textarea {
+            height: 180px;
+        }
+
+        .wpcf7-submit {
+            width: $full;
+            font-size: 14px;
+            color: $color-white;
+            transition: $transition;
+            background: $input-bg-submit;
+            line-height: .6;
+            float: right;
+            cursor: pointer;
+            margin-bottom: 0;
+
+            @media screen and (min-width: 768px) {
+                width: 160px;
+            }
+
+            &:focus {
+                background: $input-bg-submit;
+            }
+
+            &:hover {
+                transform: $transform;
+                background: $color-white;
+                color: $input-color;
+            }
+        }
+
+        // errors
+        .wpcf7-response-output {
+            border: 0 !important;
+            border-color: transparent !important;
+        }
+
+        .wpcf7-not-valid-tip {
+            font-size: 12px;
+            margin-left: 15px;
+            margin-top: 2px;
+        }
+
+        ::placeholder {
+            color: $input-placeholder;
+            opacity: 1;
+        }
+
+        :-ms-input-placeholder {
+            color: $input-placeholder;
+        }
+
+        ::-ms-input-placeholder {
+            color: $input-placeholder;
+        }
+    }
+}

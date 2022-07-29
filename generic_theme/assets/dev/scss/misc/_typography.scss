@@ -1,0 +1,15 @@
+// title default pages
+.page-title {
+    h1 {
+        color: $color-white;
+        font-size: 30px;
+        font-weight: 500;
+        margin: 0;
+        padding: 0;
+
+        @media screen and (max-width: 1200px) {
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+}

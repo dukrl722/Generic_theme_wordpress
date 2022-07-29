@@ -1,0 +1,37 @@
+// Default theme
+$color-theme: #000;
+$color-text-theme: #999;
+$font-family: 'Gotham Rounded Book', sans-serif;
+$line-height: 1.4;
+
+
+// All colors
+$color-white: #fff;
+$color-gray: #333;
+$color-black: #000;
+$color-red: #f00;
+
+
+// Colors button
+$color-primary: #727cf5;
+$color-secondary: #6c757d;
+$color-success: #0acf97;
+$color-info: #39afd1;
+$color-warning: #ffbc00;
+$color-danger: #fa5c7c;
+$color-light: #eef2f7;
+$color-dark: #313a46;
+
+
+// Colors form
+$input-color: $color-theme;
+$input-bg: $color-white;
+$input-border: $color-theme;
+$input-placeholder: $color-theme;
+$input-bg-submit: $color-theme;
+$input-error-placeholder: $color-red;
+
+
+// Transition and transform
+$transition: all 0.2s ease;
+$transform: scale(1.05);
